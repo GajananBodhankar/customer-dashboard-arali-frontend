@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap");
+
+@tailwind utilities;
+@import "tailwindcss";
+
+/* ------------------------------
+   Tailwind Layers
+------------------------------ */
+
+/* ------------------------------
+   Base Reset + Defaults
+------------------------------ */
+* {
+  padding: 0px;
+  margin: 0px;
+}
+@layer base {
+  * {
+    @apply box-border;
+  }
+
+  html,
+  body,
+  #root {
+    @apply h-full;
+  }
+
+  body {
+    @apply bg-gray-100 text-gray-900 font-sans;
+  }
+}
+
+/* ------------------------------
+   Reusable Components
+------------------------------ */
+@layer components {
+  /* Card */
+  .card {
+    @apply bg-white p-6 rounded-2xl shadow-md;
+  }
+
+  /* Input */
+  .input {
+    @apply w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400;
+  }
+
+  /* Button */
+  .btn {
+    @apply w-full py-2 rounded-lg font-medium transition;
+  }
+
+  .btn-primary {
+    @apply w-full py-2 rounded-lg font-medium transition bg-blue-500 text-white hover:bg-blue-600;
+  }
+
+  .btn-success {
+    @apply w-full py-2 rounded-lg font-medium transition bg-green-500 text-white hover:bg-green-600;
+  }
+
+  .btn-danger {
+    @apply w-full py-2 rounded-lg font-medium transition bg-red-500 text-white hover:bg-red-600;
+  }
+
+  .btn-secondary {
+    @apply w-full py-2 rounded-lg font-medium transition bg-gray-700 text-white hover:bg-gray-800;
+  }
+
+  /* Navbar */
+  .navbar {
+    @apply bg-gray-900 text-white px-6 py-3 flex justify-between items-center;
+  }
+
+  .nav-btn {
+    @apply px-4 py-1 rounded hover:opacity-90 transition;
+  }
+}
+
+/* ------------------------------
+   Utility Enhancements
+------------------------------ */
+@layer utilities {
+  /* Center container */
+  .center-screen {
+    @apply min-h-screen flex items-center justify-center;
+  }
+}
