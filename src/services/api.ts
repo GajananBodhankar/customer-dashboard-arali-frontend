@@ -1,3 +1,4 @@
+// deployed on aws instace
 const BASE_URL = "http://13.126.185.225/customer";
 
 import type { CustomerForm, iCurrentUser, LoginForm, RegisterForm } from "./propTypes";
